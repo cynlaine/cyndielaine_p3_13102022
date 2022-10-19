@@ -1,4 +1,11 @@
+* {
+    box-sizing: border-box;
+   }
 body {
-    background-color: aquamarine;
-    font-size: 100px;
+    font-family: Roboto,sans-serif;
+    max-width: 375px;
+    margin: auto;
+}
+a {
+    text-decoration: none;
 }

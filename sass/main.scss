@@ -1,2 +1,14 @@
-@import "./base/normalize";
-@import "./base/base"; 
+@use "./utils/variables";
+@use "./utils/functions";
+@use "./utils/mixins";
+
+@use "./base/normalize";
+@use "./base/base"; 
+@use "./base/typography";
+
+@use "./components/buttons";
+
+@use "./layout/header";
+@use "./layout/footer";
+
+@import './pages/home';
