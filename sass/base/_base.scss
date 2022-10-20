@@ -2,10 +2,11 @@
     box-sizing: border-box;
    }
 body {
-    font-family: Roboto,sans-serif;
-    max-width: 375px;
+    font-family: Roboto, sans-serif;
     margin: auto;
+    max-width: 1440px;
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
