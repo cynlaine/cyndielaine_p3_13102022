@@ -1,26 +1,26 @@
 // localisation 
 .location {
     display: flex;
-    background-color: #eaeaea;
+    background-color: $color-bg-medium;
     justify-content: center;
     align-items: center;
     height: 50px;
     gap: 16px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 4px 0px inset;
     &__icon {
-        font-size: 18px;
-        line-height: 50px;
-        color: #575757;
-    }
-    &__result {
-        font-weight: 700;
         font-size: 16px;
         line-height: 50px;
-        color: #575757;   
+        color: $color-bg-dark;
+    }
+    &__result {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 50px;
+        color: $color-bg-dark;   
     }
 }
 .intro {
-    background-color: #f7f7f7;
+    background-color: $color-bg-light;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -28,13 +28,75 @@
     text-align: center;
     gap: 15px;
     &__title {
-        font-size: 25px;
-        font-weight: 700;
-        margin: 0;
+        @include section-titles;
     }
     &__subtitle {
         font-size: 17px;
         font-weight: 300;
         margin: 0;    
+    }
+    &__button {
+        @include button;
+        margin: 15px;
+    }
+}
+.howto {
+    @include container-padding;
+    &__title {
+        @include section-titles;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 30px 0;
+    }
+    &__step {
+        display: flex;
+        align-items: center;
+        background-color: $color-bg-light;
+        min-width: 320px;
+        min-height: 75px;
+        position: relative;
+        border-radius: 20px;
+        box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
+        margin-left: 12px;
+        &:hover {
+            background-color: #f5edff;
+        }
+        &__number {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            line-height: 25px;
+            position: absolute;
+            left: -12px;
+        }
+        &__icon {
+            font-size: 18px;
+            color: #7e7e7e;
+            margin: 0 25px 0 35px;
+        }
+        &__text {
+            font-weight: 700;
+            line-height: 75px;
+        }
+    }
+}
+.restaurants {
+    @include container-padding;
+    background-color: $color-bg-light;
+    &__title {
+        @include section-titles;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px 0;
     }
 }
