@@ -7,16 +7,16 @@
     height: 50px;
     gap: 16px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 4px 0px inset;
-    &__icon {
+    i {
         font-size: 16px;
-        line-height: 50px;
         color: $color-bg-dark;
     }
-    &__result {
+    input {
+        background: transparent;
+        border: none;
+        height: 40px;
         font-weight: 500;
         font-size: 16px;
-        line-height: 50px;
-        color: $color-bg-dark;   
     }
 }
 .intro {
@@ -27,7 +27,7 @@
     align-items: center;
     text-align: center;
     gap: 15px;
-    &__title {
+    h1 {
         @include section-titles;
     }
     &__subtitle {
@@ -42,7 +42,7 @@
 }
 .howto {
     @include container-padding;
-    &__title {
+    h2 {
         @include section-titles;
     }
     &__container {
@@ -76,7 +76,7 @@
             position: absolute;
             left: -12px;
         }
-        &__icon {
+        i {
             font-size: 18px;
             color: #7e7e7e;
             margin: 0 25px 0 35px;
@@ -90,7 +90,7 @@
 .restaurants {
     @include container-padding;
     background-color: $color-bg-light;
-    &__title {
+    h2 {
         @include section-titles;
     }
     &__container {
