@@ -4,7 +4,7 @@
     position: relative;
     border-radius: 20px;
     box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
-    &__img {
+    img {
         height: 175px;
         object-fit: cover;
         border-radius: 20px 20px 0 0;
@@ -22,28 +22,25 @@
     }
     &__footer {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         background: white;
         height: 80px;
         border-radius: 0px 0px 20px 20px;
         padding: 15px 15px;
         position: relative;
         gap: 7px;
-        &__title {
-            margin: 0;
+        h3 {
             font-size: 18px;
             font-weight: 800;
         }
-        &__subtitle {
-            margin: 0;
+        p {
+            margin: 0.5rem 0;
             font-size: 16px;
             font-weight: 300
         }
-        &__heart {
-            @include heart-btn;
-            position: absolute;
-            right: 20px;
-            top: 20px;
+        i {
+            @include like-btn;
         }
     }
 }
+
