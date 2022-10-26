@@ -1,6 +1,6 @@
 
 img {
-    height: 260px;
+    width: 100%;
     object-fit: cover;
 }
 .menu {
@@ -9,16 +9,18 @@ img {
     top: -40px;
     z-index: 1;
     border-radius: 40px 40px 0 0;
-    padding: 0 15px;
+    padding: 0 15px 40px 15px;
+    margin-bottom: -40px;
     &__header {
         display:flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         height: 100px;
         h2 {
             font-family: Shrikhand;
             font-weight: 400;
-            font-size: 28px;
+            font-size: 1.7em;
         }
         i {
             @include like-btn;
@@ -28,16 +30,17 @@ img {
 }
 
 .submenu {
+    margin-bottom: 40px;
     h3 {
         text-transform: uppercase;
-        font-weight: 400;
-        font-size: 15px;
+        font-weight: 300;
+        font-size: 1em;
     }
     .underline {
         height: 3px;
         width: 40px;
         background-color: #99e2d0;
-        margin: 10px 0;
+        margin: 5px 0 10px 0;
     }
     &__container {
         display: flex;
@@ -51,20 +54,42 @@ img {
     background: white;
     border-radius: 20px;
     box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
-    padding: 14px 14px;
-    height: 70px;
-    width: 100%;
+    min-height: 70px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    h4 {
-        font-weight: 500;
-        font-size: 18px;
-
+    padding: 13px 10px;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h4 {
+            font-weight: 700;
+            font-size: 1.1em;
+    
+        }
+        p {
+            margin: 0.5rem 0 0 0;
+            font-weight: 300;
+            font-size: 0.9em;
+        }
     }
-    p {
-        margin: 0;
-        font-weight: 300;
-        font-size: 15px;
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        p {
+            font-weight: 900;
+            font-size: 0.95em;
+            margin: 0 10px 0 0;
+        }
+    }
+
+}
+.order {
+    display: flex;
+    justify-content: center;
+    flex-grow: 0;
+    .gradient-button {
+        padding: 0 50px;
     }
 }

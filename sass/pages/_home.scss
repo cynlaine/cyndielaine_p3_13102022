@@ -42,10 +42,6 @@
         font-weight: 200;
         margin: 0;    
     }
-    &__button {
-        @include button;
-        margin: 15px;
-    }
 }
 .howto {
     @include container-padding;

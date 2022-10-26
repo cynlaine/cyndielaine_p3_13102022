@@ -316,7 +316,7 @@ body {
   font-family: "roboto", sans-serif;
   font-size: 1em;
   margin: auto;
-  max-width: 375px;
+  max-width: 1440px;
 }
 
 a {
@@ -372,6 +372,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 .card__footer i {
   font-size: 1.7em;
+}
+
+.gradient-button {
+  display: block;
+  height: 50px;
+  padding: 0 20px 0 20px;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 10px 17px -9px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 400;
+  color: white;
+  margin: 15px;
+}
+.gradient-button:hover {
+  background: linear-gradient(0deg, #a16be0 0%, #ff93e1 100%);
 }
 
 .header {
@@ -472,22 +489,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
   margin: 0;
 }
-.intro__button {
-  display: block;
-  height: 50px;
-  width: 220px;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  box-shadow: 0px 10px 17px -9px rgba(0, 0, 0, 0.5);
-  border-radius: 30px;
-  text-align: center;
-  line-height: 50px;
-  font-weight: 400;
-  color: white;
-  margin: 15px;
-}
-.intro__button:hover {
-  background: linear-gradient(0deg, #a16be0 0%, #ff93e1 100%);
-}
 
 .howto {
   padding: 45px 20px;
@@ -556,7 +557,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 img {
-  height: 260px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -566,10 +567,12 @@ img {
   top: -40px;
   z-index: 1;
   border-radius: 40px 40px 0 0;
-  padding: 0 15px;
+  padding: 0 15px 40px 15px;
+  margin-bottom: -40px;
 }
 .menu__header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 100px;
@@ -577,23 +580,26 @@ img {
 .menu__header h2 {
   font-family: Shrikhand;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.7em;
 }
 .menu__header i {
   font-size: 1.7em;
   margin-right: 20px;
 }
 
+.submenu {
+  margin-bottom: 40px;
+}
 .submenu h3 {
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 300;
+  font-size: 1em;
 }
 .submenu .underline {
   height: 3px;
   width: 40px;
   background-color: #99e2d0;
-  margin: 10px 0;
+  margin: 5px 0 10px 0;
 }
 .submenu__container {
   display: flex;
@@ -605,21 +611,43 @@ img {
   background: white;
   border-radius: 20px;
   box-shadow: 0px 10px 17px -7px rgba(0, 0, 0, 0.2);
-  padding: 14px 14px;
-  height: 70px;
-  width: 100%;
+  min-height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 13px 10px;
+}
+.item__text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.item h4 {
-  font-weight: 500;
-  font-size: 18px;
+.item__text h4 {
+  font-weight: 700;
+  font-size: 1.1em;
 }
-.item p {
-  margin: 0;
+.item__text p {
+  margin: 0.5rem 0 0 0;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 0.9em;
+}
+.item__price {
+  display: flex;
+  align-items: flex-end;
+}
+.item__price p {
+  font-weight: 900;
+  font-size: 0.95em;
+  margin: 0 10px 0 0;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  flex-grow: 0;
+}
+.order .gradient-button {
+  padding: 0 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
