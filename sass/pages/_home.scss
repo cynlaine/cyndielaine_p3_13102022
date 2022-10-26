@@ -1,27 +1,33 @@
 // localisation 
 .location {
     display: flex;
-    background-color: $color-bg-medium;
+    background-color: $grey-medium;
     justify-content: center;
     align-items: center;
     height: 50px;
     gap: 16px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 4px 0px inset;
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     i {
-        font-size: 16px;
-        color: $color-bg-dark;
+        color: $grey-dark;
     }
     input {
+        width: 80%;
+        text-align: center;
         background: transparent;
+        outline: 0;
         border: none;
         height: 40px;
         font-weight: 500;
-        font-size: 16px;
     }
 }
 .intro {
-    background-color: $color-bg-light;
-    padding: 40px;
+    background-color: $grey-light;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,10 +35,11 @@
     gap: 15px;
     h2 {
         @include section-titles;
+        padding: 0 30px 0 30px;
     }
     &__subtitle {
-        font-size: 17px;
-        font-weight: 300;
+        font-size: 1.1rem;
+        font-weight: 200;
         margin: 0;    
     }
     &__button {
@@ -54,7 +61,7 @@
     &__step {
         display: flex;
         align-items: center;
-        background-color: $color-bg-light;
+        background-color: $grey-light;
         min-width: 320px;
         min-height: 75px;
         position: relative;
@@ -70,14 +77,14 @@
             border-radius: 50%;
             background-color: $color-primary;
             color: white;
-            font-size: 14px;
+            font-size: 0.9em;
             text-align: center;
             line-height: 25px;
             position: absolute;
             left: -12px;
         }
         i {
-            font-size: 18px;
+            font-size: 1.1em;
             color: #7e7e7e;
             margin: 0 25px 0 35px;
         }
@@ -89,7 +96,7 @@
 }
 .restaurants {
     @include container-padding;
-    background-color: $color-bg-light;
+    background-color: $grey-light;
     h2 {
         @include section-titles;
     }

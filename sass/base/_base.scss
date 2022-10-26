@@ -1,10 +1,12 @@
 * {
     box-sizing: border-box;
    }
+
 body {
-    font-family: Roboto, sans-serif;
+    font-family: "roboto", sans-serif;
+    font-size: 1em;
     margin: auto;
-    max-width: 1440px;
+    max-width: 375px;
 }
 a {
     text-decoration: none;
