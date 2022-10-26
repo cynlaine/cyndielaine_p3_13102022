@@ -1,16 +1,17 @@
 
 img {
     width: 100%;
+    max-height: 500px;
     object-fit: cover;
 }
 .menu {
     background: $grey-light;
     position: relative;
-    top: -40px;
+    top: -40px; // to overlap the pic
     z-index: 1;
     border-radius: 40px 40px 0 0;
     padding: 0 15px 40px 15px;
-    margin-bottom: -40px;
+    margin-bottom: -40px; // to avoid blank space since the top is -40px
     &__header {
         display:flex;
         flex-direction: row;
@@ -36,7 +37,7 @@ img {
         font-weight: 300;
         font-size: 1em;
     }
-    .underline {
+    .underline { 
         height: 3px;
         width: 40px;
         background-color: #99e2d0;
@@ -49,42 +50,6 @@ img {
     }
 }
 
-
-.item {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
-    min-height: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 13px 10px;
-    &__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        h4 {
-            font-weight: 700;
-            font-size: 1.1em;
-    
-        }
-        p {
-            margin: 0.5rem 0 0 0;
-            font-weight: 300;
-            font-size: 0.9em;
-        }
-    }
-    &__price {
-        display: flex;
-        align-items: flex-end;
-        p {
-            font-weight: 900;
-            font-size: 0.95em;
-            margin: 0 10px 0 0;
-        }
-    }
-
-}
 .order {
     display: flex;
     justify-content: center;

@@ -1,17 +1,56 @@
 // purple/pink gradient button
 .gradient-button {
-    display: block;
-    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
     padding: 0 20px 0 20px;
     background: $bg-gradient-button;
     box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.5);
     border-radius: 30px;
-    text-align: center;
-    line-height: 50px;
     font-weight: 400;
     color: white;
     margin: 15px;
     &:hover {
         background: $bg-gradient-button-hover;
     }
+}
+
+
+//button on menu pages to select items to order
+
+.item {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
+    min-height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 13px 10px;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h4 {
+            font-weight: 700;
+            font-size: 1.1em;
+    
+        }
+        p {
+            margin: 0.5rem 0 0 0;
+            font-weight: 300;
+            font-size: 0.9em;
+        }
+    }
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        p {
+            font-weight: 900;
+            font-size: 0.95em;
+            margin: 0 10px 0 0;
+        }
+    }
+
 }

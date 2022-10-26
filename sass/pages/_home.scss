@@ -25,6 +25,9 @@
         font-weight: 500;
     }
 }
+
+//intro text and explore button
+
 .intro {
     background-color: $grey-light;
     padding: 40px 30px;
@@ -43,6 +46,9 @@
         margin: 0;    
     }
 }
+
+// how to order section with steps
+
 .howto {
     @include container-padding;
     h2 {
@@ -54,42 +60,52 @@
         gap: 20px;
         margin: 30px 0;
     }
-    &__step {
-        display: flex;
-        align-items: center;
-        background-color: $grey-light;
-        min-width: 320px;
-        min-height: 75px;
-        position: relative;
-        border-radius: 20px;
-        box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
-        margin-left: 12px;
-        &:hover {
-            background-color: #f5edff;
-        }
-        &__number {
-            height: 25px;
-            width: 25px;
-            border-radius: 50%;
-            background-color: $color-primary;
-            color: white;
-            font-size: 0.9em;
-            text-align: center;
-            line-height: 25px;
-            position: absolute;
-            left: -12px;
-        }
-        i {
-            font-size: 1.1em;
-            color: #7e7e7e;
-            margin: 0 25px 0 35px;
-        }
-        &__text {
-            font-weight: 700;
-            line-height: 75px;
-        }
-    }
 }
+
+
+// button-like steps with color effect on hover
+
+.step {
+    display: flex;
+    align-items: center;
+    background-color: $grey-light;
+    min-height: 75px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
+    margin-left: 12px;
+    padding-right: 15px;
+    &:hover {
+        background-color: #f5edff; //on hover the bg changes its color
+    }
+    &:hover i {
+        color: $color-primary; //on hover the icon changes its color
+    }
+    &__number {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        color: white;
+        font-size: 0.9em;
+        text-align: center;
+        line-height: 25px;
+        position: absolute;
+        left: -12px;
+    }
+    i {
+        font-size: 1.1em;
+        color: #7e7e7e;
+        margin: 0 25px 0 35px;
+    }
+    &__text {
+        font-weight: 700;
+    }
+
+}
+
+// restaurant list container
+
 .restaurants {
     @include container-padding;
     background-color: $grey-light;
