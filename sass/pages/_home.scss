@@ -1,27 +1,36 @@
 // localisation 
 .location {
     display: flex;
-    background-color: $color-bg-medium;
+    background-color: $grey-medium;
     justify-content: center;
     align-items: center;
     height: 50px;
     gap: 16px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 4px 0px inset;
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     i {
-        font-size: 16px;
-        color: $color-bg-dark;
+        color: $grey-dark;
     }
     input {
+        width: 80%;
+        text-align: center;
         background: transparent;
+        outline: 0;
         border: none;
         height: 40px;
         font-weight: 500;
-        font-size: 16px;
     }
 }
+
+//intro text and explore button
+
 .intro {
-    background-color: $color-bg-light;
-    padding: 40px;
+    background-color: $grey-light;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,17 +38,17 @@
     gap: 15px;
     h2 {
         @include section-titles;
+        padding: 0 30px 0 30px;
     }
     &__subtitle {
-        font-size: 17px;
-        font-weight: 300;
+        font-size: 1.1rem;
+        font-weight: 200;
         margin: 0;    
     }
-    &__button {
-        @include button;
-        margin: 15px;
-    }
 }
+
+// how to order section with steps
+
 .howto {
     @include container-padding;
     h2 {
@@ -51,45 +60,55 @@
         gap: 20px;
         margin: 30px 0;
     }
-    &__step {
-        display: flex;
-        align-items: center;
-        background-color: $color-bg-light;
-        min-width: 320px;
-        min-height: 75px;
-        position: relative;
-        border-radius: 20px;
-        box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
-        margin-left: 12px;
-        &:hover {
-            background-color: #f5edff;
-        }
-        &__number {
-            height: 25px;
-            width: 25px;
-            border-radius: 50%;
-            background-color: $color-primary;
-            color: white;
-            font-size: 14px;
-            text-align: center;
-            line-height: 25px;
-            position: absolute;
-            left: -12px;
-        }
-        i {
-            font-size: 18px;
-            color: #7e7e7e;
-            margin: 0 25px 0 35px;
-        }
-        &__text {
-            font-weight: 700;
-            line-height: 75px;
-        }
-    }
 }
+
+
+// button-like steps with color effect on hover
+
+.step {
+    display: flex;
+    align-items: center;
+    background-color: $grey-light;
+    min-height: 75px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
+    margin-left: 12px;
+    padding-right: 15px;
+    &:hover {
+        background-color: #f5edff; //on hover the bg changes its color
+    }
+    &:hover i {
+        color: $color-primary; //on hover the icon changes its color
+    }
+    &__number {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        color: white;
+        font-size: 0.9em;
+        text-align: center;
+        line-height: 25px;
+        position: absolute;
+        left: -12px;
+    }
+    i {
+        font-size: 1.1em;
+        color: #7e7e7e;
+        margin: 0 25px 0 35px;
+    }
+    &__text {
+        font-weight: 700;
+    }
+
+}
+
+// restaurant list container
+
 .restaurants {
     @include container-padding;
-    background-color: $color-bg-light;
+    background-color: $grey-light;
     h2 {
         @include section-titles;
     }
