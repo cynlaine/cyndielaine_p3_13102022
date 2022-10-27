@@ -1,3 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@keyframes loading {
+  100% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+@keyframes spinner {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes submenu {
+  0% {
+    opacity: 0;
+    translate: 0 15px;
+  }
+  100% {
+    opacity: 100;
+    translate: 0;
+  }
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -5,7 +34,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -334,6 +362,10 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   border-radius: 20px;
   box-shadow: 0px 10px 17px -7px rgba(0, 0, 0, 0.2);
+  transition: 400ms ease-in-out;
+}
+.card:hover {
+  box-shadow: 0px 10px 17px -9px rgba(0, 0, 0, 0.7);
 }
 .card img {
   height: 175px;
@@ -380,15 +412,56 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   min-height: 50px;
   padding: 0 20px 0 20px;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  box-shadow: 0px 10px 17px -9px rgba(0, 0, 0, 0.5);
-  border-radius: 30px;
-  font-weight: 400;
-  color: white;
   margin: 15px;
+  border-radius: 30px;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  color: white;
+  box-shadow: 0px 10px 17px -9px rgba(0, 0, 0, 0.2);
+  transition: 400ms ease-in-out;
 }
 .gradient-button:hover {
-  background: linear-gradient(0deg, #a16be0 0%, #ff93e1 100%);
+  opacity: 0.8;
+  box-shadow: 0px 10px 17px -9px rgba(0, 0, 0, 0.7);
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  min-height: 75px;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0px 10px 17px -7px rgba(0, 0, 0, 0.2);
+  margin-left: 12px;
+  padding-right: 15px;
+  transition: 400ms ease-in-out;
+}
+.step:hover {
+  background-color: #f5edff;
+  box-shadow: 0px 10px 17px -7px rgba(0, 0, 0, 0.4);
+}
+.step:hover i {
+  color: #9356DC;
+}
+.step__number {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+  line-height: 25px;
+  position: absolute;
+  left: -12px;
+}
+.step i {
+  font-size: 1.1em;
+  color: #7e7e7e;
+  margin: 0 25px 0 35px;
+}
+.step__text {
+  font-weight: 700;
 }
 
 .item {
@@ -400,6 +473,15 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   justify-content: space-between;
   padding: 13px 10px;
+  opacity: 0;
+  animation: submenu 800ms forwards;
+  animation-timing-function: ease-out;
+}
+.item:nth-child(2) {
+  animation-delay: 200ms;
+}
+.item:nth-child(3) {
+  animation-delay: 400ms;
 }
 .item__text {
   display: flex;
@@ -423,6 +505,28 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
   font-size: 0.95em;
   margin: 0 10px 0 0;
+}
+
+.like-btn-container {
+  display: flex inline-block;
+}
+
+.like-btn {
+  transition: opacity 800ms ease-in-out;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+}
+.like-btn--menu {
+  background-color: #f7f7f7;
+}
+.like-btn:hover {
+  opacity: 0;
+}
+.like-btn--color {
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header {
@@ -473,6 +577,32 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.8em;
   width: 10px;
   margin-right: 15px;
+}
+
+.loading {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  z-index: 999;
+  animation: loading 3s cubic-bezier(1, 0.01, 1, 0.8);
+  animation-fill-mode: both;
+}
+
+.spinner {
+  font-family: Shrikhand;
+  font-weight: 400;
+  margin: 0;
+  opacity: 100%;
+  position: relative;
+  font-size: 5em;
+  color: #9356DC;
+  animation: spinner 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate both;
 }
 
 .location {
@@ -538,44 +668,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 30px 0;
 }
 
-.step {
-  display: flex;
-  align-items: center;
-  background-color: #f7f7f7;
-  min-height: 75px;
-  position: relative;
-  border-radius: 20px;
-  box-shadow: 0px 10px 17px -7px rgba(0, 0, 0, 0.2);
-  margin-left: 12px;
-  padding-right: 15px;
-}
-.step:hover {
-  background-color: #f5edff;
-}
-.step:hover i {
-  color: #9356DC;
-}
-.step__number {
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  background-color: #9356DC;
-  color: white;
-  font-size: 0.9em;
-  text-align: center;
-  line-height: 25px;
-  position: absolute;
-  left: -12px;
-}
-.step i {
-  font-size: 1.1em;
-  color: #7e7e7e;
-  margin: 0 25px 0 35px;
-}
-.step__text {
-  font-weight: 700;
-}
-
 .restaurants {
   padding: 45px 20px;
   background-color: #f7f7f7;
@@ -626,16 +718,21 @@ img {
 
 .submenu {
   margin-bottom: 40px;
+  opacity: 0;
+  animation: submenu 800ms forwards;
+  animation-timing-function: ease-out;
 }
 .submenu h3 {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 1em;
 }
-.submenu .underline {
+.submenu h3::after {
+  content: " ";
+  display: block;
   height: 3px;
   width: 40px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   margin: 5px 0 10px 0;
 }
 .submenu__container {

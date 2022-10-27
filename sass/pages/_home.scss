@@ -1,3 +1,28 @@
+//loading animation 
+.loading { //white block 
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 999;
+    animation: loading 3s cubic-bezier(1, 0.01, 1, 0.8);
+    animation-fill-mode: both;
+}
+.spinner { //animated logo on loading block
+    @include logo;
+    opacity: 100%;
+    position: relative;
+    font-size: 5em;
+    color: $color-primary;
+    animation: spinner 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite alternate both;
+}
+
+
 // localisation 
 .location {
     display: flex;
@@ -48,6 +73,7 @@
 }
 
 // how to order section with steps
+// steps button are in _buttons.scss 
 
 .howto {
     @include container-padding;
@@ -62,47 +88,6 @@
     }
 }
 
-
-// button-like steps with color effect on hover
-
-.step {
-    display: flex;
-    align-items: center;
-    background-color: $grey-light;
-    min-height: 75px;
-    position: relative;
-    border-radius: 20px;
-    box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
-    margin-left: 12px;
-    padding-right: 15px;
-    &:hover {
-        background-color: #f5edff; //on hover the bg changes its color
-    }
-    &:hover i {
-        color: $color-primary; //on hover the icon changes its color
-    }
-    &__number {
-        height: 25px;
-        width: 25px;
-        border-radius: 50%;
-        background-color: $color-primary;
-        color: white;
-        font-size: 0.9em;
-        text-align: center;
-        line-height: 25px;
-        position: absolute;
-        left: -12px;
-    }
-    i {
-        font-size: 1.1em;
-        color: #7e7e7e;
-        margin: 0 25px 0 35px;
-    }
-    &__text {
-        font-weight: 700;
-    }
-
-}
 
 // restaurant list container
 

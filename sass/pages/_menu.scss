@@ -32,17 +32,23 @@ img {
 
 .submenu {
     margin-bottom: 40px;
+    opacity: 0;
+    animation: submenu 800ms forwards;
+    animation-timing-function: ease-out;
     h3 {
         text-transform: uppercase;
         font-weight: 300;
         font-size: 1em;
+        &::after { // green underline 
+            content: " ";
+            display: block;
+            height: 3px;
+            width: 40px;
+            background-color: $color-tertiary;
+            margin: 5px 0 10px 0;
+        }
     }
-    .underline { 
-        height: 3px;
-        width: 40px;
-        background-color: #99e2d0;
-        margin: 5px 0 10px 0;
-    }
+
     &__container {
         display: flex;
         flex-direction: column;

@@ -5,20 +5,61 @@
     align-items: center;
     min-height: 50px;
     padding: 0 20px 0 20px;
-    background: $bg-gradient-button;
-    box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.5);
-    border-radius: 30px;
-    font-weight: 400;
-    color: white;
     margin: 15px;
+    border-radius: 30px;
+    background: $color-gradient;
+    color: white;
+    box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.2);
+    transition: 400ms ease-in-out;
     &:hover {
-        background: $bg-gradient-button-hover;
+        opacity: 0.8; //on hover the button lightens
+        box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.7);
     }
 }
 
+// button-like steps from main page
+.step {
+    display: flex;
+    align-items: center;
+    background-color: $grey-light;
+    min-height: 75px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
+    margin-left: 12px;
+    padding-right: 15px;
+    transition: 400ms ease-in-out;
+    &:hover {
+        background-color: #f5edff; //on hover the bg changes its color
+        box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.4); 
+    }
+    &:hover i {
+        color: $color-primary; //on hover the icon changes its color
+    }
+    &__number {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        color: white;
+        font-size: 0.9em;
+        text-align: center;
+        line-height: 25px;
+        position: absolute;
+        left: -12px;
+    }
+    i {
+        font-size: 1.1em;
+        color: #7e7e7e;
+        margin: 0 25px 0 35px;
+    }
+    &__text {
+        font-weight: 700;
+    }
 
-//button on menu pages to select items to order
+}
 
+//item buttons on menu pages
 .item {
     background: white;
     border-radius: 20px;
@@ -28,6 +69,15 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 13px 10px;
+    opacity: 0;
+    animation: submenu 800ms forwards;
+    animation-timing-function: ease-out;
+    &:nth-child(2) {
+        animation-delay: 200ms;
+    }
+    &:nth-child(3) {
+        animation-delay: 400ms;
+    }
     &__text {
         display: flex;
         flex-direction: column;
@@ -53,4 +103,27 @@
         }
     }
 
+}
+
+//heart shaped like button with its container
+
+.like-btn-container {
+    display: flex inline-block;
+}
+.like-btn {
+    transition: opacity 800ms ease-in-out;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    &--menu {
+        background-color: $grey-light; //different bg for menu pages
+    }
+    &:hover {
+        opacity: 0; //empty heart disappears revealing the gradient button
+    }
+    &--color {
+        background: $color-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }

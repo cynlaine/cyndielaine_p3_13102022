@@ -2,12 +2,11 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-// background color for gradient button
-// lighten on hover
-$bg-gradient-button: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
-$bg-gradient-button-hover: linear-gradient(0deg, lighten($color-primary, 5%) 0%, lighten($color-secondary, 5%) 100%);
+// gradient color for main buttons and like buttons
+$color-gradient: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
 
-// grey for background and fonts
+// grey for background and some fonts
 $grey-light: #f7f7f7;
 $grey-medium: #eaeaea;
 $grey-dark: #353535;
+
