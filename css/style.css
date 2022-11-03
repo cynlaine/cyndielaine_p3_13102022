@@ -30,8 +30,8 @@
 }
 @keyframes submenu {
   100% {
-    opacity: 100;
-    translate: 0;
+    opacity: 100%;
+    transform: translate(0);
   }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -479,7 +479,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  translate: 0 20px;
+  transform: translate(20px);
   opacity: 0;
   animation: submenu 800ms forwards;
   animation-timing-function: ease-out;
@@ -538,18 +538,18 @@ h1, h2, h3, h4, h5, h6 {
 .item__check i {
   font-size: 1.5em;
   color: white;
-  rotate: -360deg;
+  transition: 0.7s ease;
+  transform: rotate(-360deg);
 }
 .item:hover .item__check {
   margin-right: 0;
 }
 .item:hover i {
-  transition: rotate 0.7s ease;
-  rotate: 0deg;
+  transform: rotate(0deg);
 }
 
 .like-btn-container {
-  display: flex inline-block;
+  display: flex;
 }
 
 .like-btn {

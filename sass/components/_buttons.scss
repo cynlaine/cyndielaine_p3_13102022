@@ -68,7 +68,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    translate: 0 20px;
+    transform: translate(20px);
     opacity: 0;
     animation: submenu 800ms forwards;
     animation-timing-function: ease-out;
@@ -126,7 +126,8 @@
         i {
             font-size: 1.5em;
             color: white;
-            rotate: -360deg;   
+            transition: 0.7s ease;
+            transform: rotate(-360deg);   
         }
     }
     &:hover {
@@ -134,8 +135,7 @@
             margin-right: 0; //on hover the box slide to the left
         }
         i {
-            transition: rotate 0.7s ease; // on hover the check icon rotates
-            rotate: 0deg;
+            transform: rotate(0deg);
         }
     }
 }
@@ -143,7 +143,7 @@
 //heart shaped like button with its container
 
 .like-btn-container {
-    display: flex inline-block;
+    display: flex;
 }
 .like-btn {
     transition: opacity 800ms ease-in-out;

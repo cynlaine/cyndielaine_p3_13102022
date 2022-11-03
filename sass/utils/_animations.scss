@@ -41,7 +41,7 @@
 // the submenu buttons appear slowly and gently park on top
 @keyframes submenu {
   100% {
-    opacity: 100;
-    translate: 0;
+    opacity: 100%;
+    transform: translate(0);
   }
 }
