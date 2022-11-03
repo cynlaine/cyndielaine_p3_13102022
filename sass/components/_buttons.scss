@@ -68,6 +68,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    translate: 0 20px;
+    opacity: 0;
     animation: submenu 800ms forwards;
     animation-timing-function: ease-out;
     overflow: hidden;
@@ -124,15 +126,16 @@
         i {
             font-size: 1.5em;
             color: white;
-            
+            rotate: -360deg;   
         }
     }
     &:hover {
         .item__check {
-            margin-right: 0;
+            margin-right: 0; //on hover the box slide to the left
         }
         i {
-            animation: checked 0.7s ease;
+            transition: rotate 0.7s ease; // on hover the check icon rotates
+            rotate: 0deg;
         }
     }
 }
