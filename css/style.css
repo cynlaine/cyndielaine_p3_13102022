@@ -5,16 +5,27 @@
     visibility: hidden;
   }
 }
-@keyframes spinner {
+@keyframes bounce {
   0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
+    transform: scale(1, 1) translateY(0);
   }
-  40% {
-    opacity: 0.6;
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-50px);
+  }
+  50% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  60% {
+    transform: scale(1, 1) translateY(-5px);
+  }
+  65% {
+    transform: scale(1, 1) translateY(0);
   }
   100% {
-    opacity: 1;
+    transform: scale(1, 1) translateY(0);
   }
 }
 @keyframes submenu {
@@ -594,15 +605,38 @@ h1, h2, h3, h4, h5, h6 {
   animation-fill-mode: both;
 }
 
-.spinner {
+.bouncing-logo {
+  position: relative;
+  display: flex;
   font-family: Shrikhand;
   font-weight: 400;
+  font-size: 3em;
   margin: 0;
-  opacity: 100%;
-  position: relative;
-  font-size: 5em;
   color: #9356DC;
-  animation: spinner 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate both;
+}
+.bouncing-logo .o1 {
+  animation: bounce 1.5s ease infinite;
+}
+.bouncing-logo .h {
+  animation: bounce 1.5s ease infinite 0.1s;
+}
+.bouncing-logo .m {
+  animation: bounce 1.5s ease infinite 0.2s;
+}
+.bouncing-logo .y {
+  animation: bounce 1.5s ease infinite 0.3s;
+}
+.bouncing-logo .f {
+  animation: bounce 1.5s ease infinite 0.4s;
+}
+.bouncing-logo .o2 {
+  animation: bounce 1.5s ease infinite 0.5s;
+}
+.bouncing-logo .o3 {
+  animation: bounce 1.5s ease infinite 0.6s;
+}
+.bouncing-logo .d {
+  animation: bounce 1.5s ease infinite 0.7s;
 }
 
 .location {

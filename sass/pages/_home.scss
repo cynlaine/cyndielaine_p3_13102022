@@ -13,14 +13,41 @@
     animation: loading 3s cubic-bezier(1, 0.01, 1, 0.8);
     animation-fill-mode: both;
 }
-.spinner { //animated logo on loading block
-    @include logo;
-    opacity: 100%;
+
+.bouncing-logo {
     position: relative;
-    font-size: 5em;
+    display: flex;
+    font-family: Shrikhand;
+    font-weight: 400;
+    font-size: 3em;
+    margin: 0;
     color: $color-primary;
-    animation: spinner 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite alternate both;
-}
+        // animation-name animation-duration easing-function iteration-count delay //
+        .o1 {
+            animation: bounce 1.5s ease infinite;
+        }   
+        .h {
+            animation: bounce 1.5s ease infinite 0.1s;
+        }        
+        .m {
+            animation: bounce 1.5s ease infinite 0.2s;
+        }     
+        .y {
+            animation: bounce 1.5s ease infinite 0.3s;
+        }    
+        .f {
+            animation: bounce 1.5s ease infinite 0.4s;
+        }       
+        .o2 {
+            animation: bounce 1.5s ease infinite 0.5s;
+        }      
+        .o3 {
+            animation: bounce 1.5s ease infinite 0.6s;
+        }
+        .d {
+            animation: bounce 1.5s ease infinite 0.7s;
+        }
+  }
 
 
 // localisation 
