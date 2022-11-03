@@ -1,0 +1,23 @@
+{
+  "name": "ok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "sass": "sass --watch ./sass/main.scss:./css/style.css  --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cynlaine/cyndielaine_p3_13102022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cynlaine/cyndielaine_p3_13102022/issues"
+  },
+  "homepage": "https://github.com/cynlaine/cyndielaine_p3_13102022#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}

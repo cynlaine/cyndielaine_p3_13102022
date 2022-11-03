@@ -1,0 +1,17 @@
+.header {
+    padding: 1.2rem 0 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &__logo {
+        @include logo;
+        font-size: 1.9em;
+        text-align: center;
+    }
+    a {
+        position: absolute;
+        left: 25px;
+        color: $grey-dark;
+    }
+}

@@ -1,0 +1,17 @@
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/animations";
+
+@import "./base/normalize";
+@import "./base/base"; 
+@import "./base/typography";
+
+@import "./components/cards";
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import './pages/home';
+@import './pages/menu';

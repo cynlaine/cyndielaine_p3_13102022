@@ -1,0 +1,47 @@
+// loading animation
+@keyframes loading {
+  100% {
+    opacity: 0%;
+    visibility: hidden //hide the white block at the end of loading
+  }
+}
+
+//bouncing loading logo
+@keyframes bounce {
+  0% {
+    transform: scale(1,1)
+    translateY(0);
+  }
+  10% {
+    transform: scale(1.1,0.9)
+    translateY(0);
+  }
+  30% {
+    transform: scale(0.9,1.1)
+    translateY(-50px);
+  }
+  50% {
+    transform: scale(1.1,0.9)
+    translateY(0);
+  }
+  60% {
+    transform: scale(1,1)
+    translateY(-5px);
+  }
+  65% {
+    transform: scale(1,1)
+    translateY(0);
+  }
+  100% {
+    transform: scale(1,1)
+    translateY(0);
+  }
+}
+
+// the submenu buttons appear slowly and gently park on top
+@keyframes submenu {
+  100% {
+    opacity: 100;
+    translate: 0;
+  }
+}

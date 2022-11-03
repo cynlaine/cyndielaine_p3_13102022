@@ -1,0 +1,64 @@
+
+img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+.menu {
+    background: $grey-light;
+    position: relative;
+    top: -40px; // to overlap the pic
+    z-index: 1;
+    border-radius: 40px 40px 0 0;
+    padding: 0 15px 40px 15px;
+    margin-bottom: -40px; // to avoid blank space since the top is -40px
+    &__header {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        h2 {
+            font-family: Shrikhand;
+            font-weight: 400;
+            font-size: 1.7em;
+        }
+        i {
+            @include like-btn;
+            margin-right: 20px;
+        }
+    }
+}
+
+.submenu {
+    margin-bottom: 40px;
+
+    h3 {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1em;
+        &::after { // green underline 
+            content: " ";
+            display: block;
+            height: 3px;
+            width: 40px;
+            background-color: $color-tertiary;
+            margin: 5px 0 10px 0;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.order-btn {
+    display: flex;
+    justify-content: center;
+    flex-grow: 0;
+    .gradient-button {
+        padding: 0 50px;
+    }
+}
