@@ -47,9 +47,7 @@
         }
     }
     @include for-tablet {
-        min-width: 330px;
-        max-width: 400px;
-        flex: 1;
+
     }
 }
 
