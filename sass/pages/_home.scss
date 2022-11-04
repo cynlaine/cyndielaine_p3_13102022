@@ -136,15 +136,14 @@
         @include section-titles;
     }
     &__container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 15px;
         margin: 20px 0;
         @include for-tablet {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
+            justify-content: center;
         }
     }
     @include for-big-desktop {
