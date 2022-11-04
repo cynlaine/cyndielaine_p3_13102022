@@ -9,11 +9,12 @@
     border-radius: 30px;
     background: $color-gradient;
     color: white;
-    box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.2);
+    @include shadow-light;
     transition: 400ms ease-in-out;
+
     &:hover {
         opacity: 0.8; //on hover the button lightens
-        box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.7);
+        @include shadow-dark;
     }
 }
 
@@ -25,17 +26,20 @@
     min-height: 75px;
     position: relative;
     border-radius: 20px;
-    box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
+    @include shadow-light;
     margin-left: 12px;
     padding-right: 15px;
     transition: 400ms ease-in-out;
+
     &:hover {
         background-color: #f5edff; //on hover the bg changes its color
-        box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.4); 
+        @include shadow-dark;
     }
+
     &:hover i {
         color: $color-primary; //on hover the icon changes its color
     }
+
     &__number {
         height: 25px;
         width: 25px;
@@ -48,124 +52,44 @@
         position: absolute;
         left: -12px;
     }
+
     i {
         font-size: 1.1em;
         color: #7e7e7e;
         margin: 0 25px 0 35px;
     }
+
     &__text {
         font-weight: 700;
     }
+
     @include for-desktop {
         flex: 1;
     }
 }
 
-//item buttons on menu pages
-.item {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: 400ms ease-in-out;
-    animation: submenu 800ms forwards ease-out;
-    overflow: hidden;
-    &:nth-child(2) {
-        animation-delay: 200ms;
-    }
-    &:nth-child(3) {
-        animation-delay: 400ms;
-    }
-    &:nth-child(4) {
-        animation-delay: 600ms;
-    }
-    &__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 13px 0 13px 10px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        flex: 1;
-        h4 {
-            font-weight: 700;
-            font-size: 1.1em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-    
-        }
-        p {
-            margin: 0.5rem 0 0 0;
-            font-weight: 300;
-            font-size: 0.9em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-    &__price {
-        display: flex;
-        align-items: flex-end;
-        padding: 13px 20px 13px 10px;
-        p {
-            font-weight: 900;
-            font-size: 0.95em;
-            margin: 0;
-        }
-    }
-    &__check { 
-        background-color: $color-tertiary;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 70px;
-        margin-right: -70px;
-        transition: 0.7s ease;
-        i {
-            font-size: 1.5em;
-            color: white;
-            transition: 0.7s ease;
-            transform: rotate(-360deg);   
-        }
-    }
-    &:hover {
-        cursor: pointer;
-        box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.5);
-        .item__check {
-            margin-right: 0; //on hover the box slide to the left
-        }
-        i {
-            transform: rotate(0deg); //on hover the check icon rotates back
-        }
-    }
-    @include for-desktop{
-        max-width: 300px;
-    }
-}
+
 
 //heart shaped like button with its container
 
 .like-btn-container {
     display: flex;
 }
+
 .like-btn {
     transition: opacity 800ms ease-in-out;
     position: absolute;
     z-index: 1;
     background-color: white;
+
     &--menu {
         background-color: $grey-light; //different bg for menu pages
     }
+
     &:hover {
         opacity: 0; //empty heart disappears revealing the gradient button
     }
+
     &--color {
         background: $color-gradient;
         -webkit-background-clip: text;

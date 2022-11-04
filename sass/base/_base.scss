@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-   }
+}
 
 body {
     font-family: "roboto", sans-serif;
@@ -8,10 +8,17 @@ body {
     margin: auto;
     max-width: 1440px;
 }
+
 a {
     text-decoration: none;
     color: inherit;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
