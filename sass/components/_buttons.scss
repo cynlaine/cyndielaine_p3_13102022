@@ -56,7 +56,9 @@
     &__text {
         font-weight: 700;
     }
-
+    @include for-desktop {
+        flex: 1;
+    }
 }
 
 //item buttons on menu pages
@@ -64,14 +66,14 @@
     background: white;
     border-radius: 20px;
     box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.2);
-    min-height: 70px;
+    height: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    translate: 0 20px;
+    transform: translateY(20px);
     opacity: 0;
-    animation: submenu 800ms forwards;
-    animation-timing-function: ease-out;
+    transition: 400ms ease-in-out;
+    animation: submenu 800ms forwards ease-out;
     overflow: hidden;
     &:nth-child(2) {
         animation-delay: 200ms;
@@ -126,24 +128,29 @@
         i {
             font-size: 1.5em;
             color: white;
-            rotate: -360deg;   
+            transition: 0.7s ease;
+            transform: rotate(-360deg);   
         }
     }
     &:hover {
+        cursor: pointer;
+        box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.5);
         .item__check {
             margin-right: 0; //on hover the box slide to the left
         }
         i {
-            transition: rotate 0.7s ease; // on hover the check icon rotates
-            rotate: 0deg;
+            transform: rotate(0deg); //on hover the check icon rotates back
         }
+    }
+    @include for-desktop{
+        max-width: 300px;
     }
 }
 
 //heart shaped like button with its container
 
 .like-btn-container {
-    display: flex inline-block;
+    display: flex;
 }
 .like-btn {
     transition: opacity 800ms ease-in-out;
