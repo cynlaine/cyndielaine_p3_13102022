@@ -40,6 +40,8 @@ img {
     @include for-desktop {
         flex-direction: row;
         justify-content: space-around;
+        margin: auto;
+        max-width: 1000px;
     }
 }
 
@@ -55,15 +57,11 @@ img {
             height: 3px;
             width: 40px;
             background-color: $color-tertiary;
-            margin: 5px 0 10px 0;
+            margin-top: 5px;
         }
     }
-    &__container {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
 }
+
 
 .order-btn {
     display: flex;
