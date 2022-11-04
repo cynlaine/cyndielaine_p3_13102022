@@ -3,6 +3,9 @@ img {
     width: 100%;
     max-height: 500px;
     object-fit: cover;
+    @include for-big-desktop {
+        border-radius: 20px 20px 0 0;
+    }
 }
 .menu {
     background: $grey-light;
@@ -30,9 +33,18 @@ img {
     }
 }
 
+
+.submenu-container { //displays submenus in column on phone and tablet, row on desktop
+    display: flex;
+    flex-direction: column;
+    @include for-desktop {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
 .submenu {
     margin-bottom: 40px;
-
     h3 {
         text-transform: uppercase;
         font-weight: 300;
@@ -46,7 +58,6 @@ img {
             margin: 5px 0 10px 0;
         }
     }
-
     &__container {
         display: flex;
         flex-direction: column;

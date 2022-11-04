@@ -6,7 +6,6 @@
 }
 
 // titles of sections
-
 @mixin section-titles {
     font-size: 1.5rem;
     font-weight: 900;
@@ -14,14 +13,24 @@
 }
 
 // padding of sections
-
 @mixin container-padding {
     padding: 45px 20px;
 }
 
 // heart/like button
-
 @mixin like-btn {
     font-size: 1.7em;
 }
 
+//media queries
+@mixin for-tablet {
+    @media (min-width: 768px) { @content; }
+  }
+
+@mixin for-desktop {
+    @media (min-width: 1024px) { @content; }
+  }
+
+@mixin for-big-desktop {
+    @media (min-width: 1440px) { @content; }
+  }
