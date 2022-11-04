@@ -1,12 +1,13 @@
-
 img {
     width: 100%;
     max-height: 500px;
     object-fit: cover;
+
     @include for-big-desktop {
         border-radius: 20px 20px 0 0;
     }
 }
+
 .menu {
     background: $grey-light;
     position: relative;
@@ -15,17 +16,20 @@ img {
     border-radius: 40px 40px 0 0;
     padding: 0 15px 40px 15px;
     margin-bottom: -40px; // to avoid blank space since the top is -40px
+
     &__header {
-        display:flex;
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         height: 100px;
+
         h2 {
             font-family: Shrikhand;
             font-weight: 400;
             font-size: 1.7em;
         }
+
         i {
             @include like-btn;
             margin-right: 20px;
@@ -34,41 +38,144 @@ img {
 }
 
 
-.submenu-container { //displays submenus in column on phone and tablet, row on desktop
-    display: flex;
-    flex-direction: column;
+.submenu-container {
+    //displays submenus in 1 column on phone and tablet and 3 columns on desktop
+    display: grid;
+    margin-bottom: 40px;
+
     @include for-desktop {
-        flex-direction: row;
-        justify-content: space-around;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 15px;
     }
 }
 
 .submenu {
-    margin-bottom: 40px;
+    max-width: 100%;
+    overflow: hidden;
+
     h3 {
         text-transform: uppercase;
         font-weight: 300;
         font-size: 1em;
-        &::after { // green underline 
+
+        &::after {
+            // green underline 
             content: " ";
             display: block;
             height: 3px;
             width: 40px;
             background-color: $color-tertiary;
-            margin: 5px 0 10px 0;
+            margin-top: 5px;
         }
     }
-    &__container {
+}
+
+.item {
+    background: white;
+    border-radius: 20px;
+    height: 70px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 400ms ease-in-out;
+    animation: submenu 800ms forwards ease-out;
+    overflow: hidden;
+    max-width: 100%;
+    @include shadow-light;
+
+    &:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    &:nth-child(3) {
+        animation-delay: 400ms;
+    }
+
+    &:nth-child(4) {
+        animation-delay: 600ms;
+    }
+
+    &__text {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        justify-content: space-between;
+        padding: 13px 0 13px 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+
+        h4 {
+            font-weight: 700;
+            font-size: 1.1em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
+
+        p {
+            margin: 0.5rem 0 0 0;
+            font-weight: 300;
+            font-size: 0.9em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        padding: 13px 20px 13px 10px;
+
+        p {
+            font-weight: 900;
+            font-size: 0.95em;
+            margin: 0;
+        }
+    }
+
+    &__check {
+        background-color: $color-tertiary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 70px;
+        margin-right: -70px;
+        transition: 0.7s ease;
+
+        i {
+            font-size: 1.5em;
+            color: white;
+            transition: 0.7s ease;
+            transform: rotate(-360deg);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        @include shadow-dark
+    }
+
+    &:hover &__check {
+        margin-right: 0; //on hover the box slide to the left
+    }
+
+    &:hover i {
+        transform: rotate(0deg); //on hover the check icon rotates back
     }
 }
+
 
 .order-btn {
     display: flex;
     justify-content: center;
     flex-grow: 0;
+
     .gradient-button {
         padding: 0 50px;
     }

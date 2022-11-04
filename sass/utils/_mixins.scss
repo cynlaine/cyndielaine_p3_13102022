@@ -22,15 +22,32 @@
     font-size: 1.7em;
 }
 
+//box shadow
+@mixin shadow-light {
+    box-shadow: 0px 9px 12px -9px rgba(0, 0, 0, 0.5);
+}
+
+@mixin shadow-dark {
+    box-shadow: 0px 9px 12px -9px rgba(0, 0, 0, 0.9);
+}
+
+
+
 //media queries
 @mixin for-tablet {
-    @media (min-width: 768px) { @content; }
-  }
+    @media (min-width: 768px) {
+        @content;
+    }
+}
 
 @mixin for-desktop {
-    @media (min-width: 1024px) { @content; }
-  }
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
 
 @mixin for-big-desktop {
-    @media (min-width: 1440px) { @content; }
-  }
+    @media (min-width: 1440px) {
+        @content;
+    }
+}

@@ -4,11 +4,13 @@
     justify-content: center;
     align-items: center;
     position: relative;
+
     &__logo {
         @include logo;
         font-size: 1.9em;
         text-align: center;
     }
+
     a {
         position: absolute;
         left: 25px;
