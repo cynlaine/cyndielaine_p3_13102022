@@ -17,11 +17,6 @@
     padding: 45px 20px;
 }
 
-// heart/like button
-@mixin like-btn {
-    font-size: 1.7em;
-}
-
 //box shadow
 @mixin shadow-light {
     box-shadow: 0px 9px 12px -9px rgba(0, 0, 0, 0.5);
@@ -30,8 +25,6 @@
 @mixin shadow-dark {
     box-shadow: 0px 9px 12px -9px rgba(0, 0, 0, 0.9);
 }
-
-
 
 //media queries
 @mixin for-tablet {

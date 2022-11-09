@@ -11,17 +11,13 @@
     align-items: center;
     background-color: white;
     z-index: 999;
-    animation: loading 3s cubic-bezier(1, 0.01, 1, 0.8);
-    animation-fill-mode: both;
+    animation: loading 3s cubic-bezier(1, 0.01, 1, 0.8) both;
 }
 
 .bouncing-logo {
-    position: relative;
     display: flex;
-    font-family: Shrikhand;
-    font-weight: 400;
+    @include logo;
     font-size: 3em;
-    margin: 0;
     color: $color-primary;
 
     // animation-name animation-duration easing-function iteration-count delay //
