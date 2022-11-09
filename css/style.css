@@ -485,10 +485,11 @@ h6 {
 }
 
 .like-btn {
-  transition: opacity 800ms ease-in-out;
   position: absolute;
   z-index: 1;
   background-color: white;
+  font-size: 1.7em;
+  transition: opacity 800ms ease-in-out;
 }
 .like-btn--menu {
   background-color: #f7f7f7;
@@ -497,6 +498,7 @@ h6 {
   opacity: 0;
 }
 .like-btn--color {
+  font-size: 1.7em;
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -568,17 +570,15 @@ h6 {
   align-items: center;
   background-color: white;
   z-index: 999;
-  animation: loading 3s cubic-bezier(1, 0.01, 1, 0.8);
-  animation-fill-mode: both;
+  animation: loading 3s cubic-bezier(1, 0.01, 1, 0.8) both;
 }
 
 .bouncing-logo {
-  position: relative;
   display: flex;
   font-family: Shrikhand;
   font-weight: 400;
-  font-size: 3em;
   margin: 0;
+  font-size: 3em;
   color: #9356DC;
 }
 .bouncing-logo .o1 {
@@ -747,7 +747,6 @@ img {
   font-size: 1.7em;
 }
 .menu__header i {
-  font-size: 1.7em;
   margin-right: 20px;
 }
 

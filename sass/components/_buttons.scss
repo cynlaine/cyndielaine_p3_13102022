@@ -77,10 +77,11 @@
 }
 
 .like-btn {
-    transition: opacity 800ms ease-in-out;
     position: absolute;
     z-index: 1;
     background-color: white;
+    font-size: 1.7em;
+    transition: opacity 800ms ease-in-out;
 
     &--menu {
         background-color: $grey-light; //different bg for menu pages
@@ -91,6 +92,7 @@
     }
 
     &--color {
+        font-size: 1.7em;
         background: $color-gradient;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
