@@ -1,61 +1,4 @@
-//loading animation 
-.loading {
-    //white block 
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    z-index: 999;
-    animation: loading 3s cubic-bezier(1, 0.01, 1, 0.8) both;
-}
-
-.bouncing-logo {
-    display: flex;
-    @include logo;
-    font-size: 3em;
-    color: $color-primary;
-
-    // animation-name animation-duration easing-function iteration-count delay //
-    .o1 {
-        animation: bounce 1.5s ease infinite;
-    }
-
-    .h {
-        animation: bounce 1.5s ease infinite 0.1s;
-    }
-
-    .m {
-        animation: bounce 1.5s ease infinite 0.2s;
-    }
-
-    .y {
-        animation: bounce 1.5s ease infinite 0.3s;
-    }
-
-    .f {
-        animation: bounce 1.5s ease infinite 0.4s;
-    }
-
-    .o2 {
-        animation: bounce 1.5s ease infinite 0.5s;
-    }
-
-    .o3 {
-        animation: bounce 1.5s ease infinite 0.6s;
-    }
-
-    .d {
-        animation: bounce 1.5s ease infinite 0.7s;
-    }
-}
-
-
-// localisation 
+// location form
 .location {
     display: flex;
     background-color: $grey-medium;
@@ -117,8 +60,8 @@
     }
 }
 
-// how to order section with steps
-// steps button are in _buttons.scss 
+// how to order container
+// --> the button is in components/howto.scss 
 
 .howto {
     @include container-padding;
