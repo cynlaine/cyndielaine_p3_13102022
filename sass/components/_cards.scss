@@ -1,3 +1,4 @@
+//restaurant cards
 .card {
     display: flex;
     flex-direction: column;
@@ -16,7 +17,7 @@
         border-radius: 20px 20px 0 0;
     }
 
-    &__sticker {
+    &__sticker { //"nouveau" sticker on cards
         padding: 5px 12px;
         background: #99e2d0;
         color: #008766;
@@ -53,6 +54,4 @@
             font-size: 1.7em;
         }
     }
-
-    @include for-tablet {}
 }
