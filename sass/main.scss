@@ -1,6 +1,5 @@
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/animations";
 
 @import "./base/normalize";
 @import "./base/base";
@@ -8,9 +7,13 @@
 
 @import "./components/cards";
 @import "./components/buttons";
+@import "./components/likebtn";
+@import "./components/howto";
+@import "./components/item";
 
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/loader";
 
 @import './pages/home';
-@import './pages/menu';
+@import './pages/restaurant';

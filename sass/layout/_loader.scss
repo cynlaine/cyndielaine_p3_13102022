@@ -1,0 +1,95 @@
+//loading animation 
+
+// ------ white block ------ 
+@keyframes loading {
+    100% {
+      opacity: 0;
+      visibility: hidden
+    }
+  }
+
+.loading {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 999;
+    animation: loading 3s cubic-bezier(1, 0.01, 1, 0.8) both;
+}
+
+// ----- bouncing logo ------
+
+@keyframes bounce {
+    0% {
+      transform: scale(1, 1) translateY(0);
+    }
+  
+    10% {
+      transform: scale(1.1, 0.9) translateY(0);
+    }
+  
+    30% {
+      transform: scale(0.9, 1.1) translateY(-50px);
+    }
+  
+    50% {
+      transform: scale(1.1, 0.9) translateY(0);
+    }
+  
+    60% {
+      transform: scale(1, 1) translateY(-5px);
+    }
+  
+    65% {
+      transform: scale(1, 1) translateY(0);
+    }
+  
+    100% {
+      transform: scale(1, 1) translateY(0);
+    }
+  }
+
+.bouncing-logo {
+    display: flex;
+    @include logo;
+    font-size: 3em;
+    color: $color-primary;
+
+    // animation-name animation-duration easing-function iteration-count delay //
+    .o1 {
+        animation: bounce 1.5s ease infinite;
+    }
+
+    .h {
+        animation: bounce 1.5s ease infinite 0.1s;
+    }
+
+    .m {
+        animation: bounce 1.5s ease infinite 0.2s;
+    }
+
+    .y {
+        animation: bounce 1.5s ease infinite 0.3s;
+    }
+
+    .f {
+        animation: bounce 1.5s ease infinite 0.4s;
+    }
+
+    .o2 {
+        animation: bounce 1.5s ease infinite 0.5s;
+    }
+
+    .o3 {
+        animation: bounce 1.5s ease infinite 0.6s;
+    }
+
+    .d {
+        animation: bounce 1.5s ease infinite 0.7s;
+    }
+}
