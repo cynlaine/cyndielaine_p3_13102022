@@ -23,6 +23,7 @@
         font-size: 1.7em;
         background: $color-gradient;
         -webkit-background-clip: text;
+                background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 }
