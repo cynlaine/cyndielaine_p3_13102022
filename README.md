@@ -7,7 +7,7 @@
 
 **Restrictions :** Le développement devra se faire sans JavaScript. Aucun framework ne devra être utilisé.
 
-![**Preview**](https://cynlaine.github.io/p3_laine_cyndie/)
+[**Preview**](https://cynlaine.github.io/p3_laine_cyndie/)
 
 ![](https://user.oc-static.com/upload/2020/08/24/15982605908418_Maquettes%20Ohmyfood.jpg)
 
